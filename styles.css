@@ -8,7 +8,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 16px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1c2430;
   background: #eef2f7;
 }
 
@@ -22,8 +26,17 @@ body {
 }
 
 h1 {
-  margin-top: 0;
+  margin: 0 0 8px;
   text-align: center;
+  font-size: 1.75rem;
+  color: #12306b;
+}
+
+.ayuda {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4a5568;
 }
 
 .campo {
@@ -53,10 +66,25 @@ button {
   padding: 10px 14px;
   border: none;
   border-radius: 4px;
-  background: #2f6fed;
+  background: #1f5bd6;
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
+}
+
+button:hover {
+  background: #174aae;
+}
+
+/* Foco visible para navegación con teclado */
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffb703;
+  outline-offset: 2px;
+}
+
+input:focus-visible {
+  border-color: #1f5bd6;
 }
 
 #btnIngresar {
@@ -81,4 +109,29 @@ button {
 
 .mensaje.fallo {
   color: #c62828;
+}
+
+/* Vista móvil */
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .contenedor {
+    width: 100%;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .fila-clave {
+    flex-direction: column;
+  }
+
+  .fila-clave button {
+    width: 100%;
+  }
 }
