@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 380px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aab4c0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.fila-clave {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #2f6fed;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#btnIngresar {
+  width: 100%;
+}
+
+.error {
+  display: block;
+  min-height: 1em;
+  margin-top: 4px;
+  color: #c62828;
+}
+
+.mensaje {
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje.ok {
+  color: #2e7d32;
+}
+
+.mensaje.fallo {
+  color: #c62828;
+}

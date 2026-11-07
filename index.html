@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - proyprueba</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Login</h1>
+
+    <form id="formLogin" novalidate>
+      <div class="campo">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" placeholder="correo@ejemplo.com">
+        <small id="errorCorreo" class="error"></small>
+      </div>
+
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <div class="fila-clave">
+          <input type="password" id="clave" placeholder="Mínimo 8 caracteres">
+          <button type="button" id="btnMostrar">Mostrar</button>
+        </div>
+        <small id="errorClave" class="error"></small>
+      </div>
+
+      <button type="submit" id="btnIngresar">Ingresar</button>
+    </form>
+
+    <p id="mensaje" class="mensaje"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
