@@ -8,28 +8,31 @@
 </head>
 <body>
   <main class="contenedor">
-    <h1>Login</h1>
+    <header>
+      <h1>Iniciar sesión</h1>
+      <p class="ayuda" id="ayudaLogin">Ingresa tu correo y tu contraseña para continuar. Todos los campos son obligatorios.</p>
+    </header>
 
-    <form id="formLogin" novalidate>
+    <form id="formLogin" novalidate aria-describedby="ayudaLogin">
       <div class="campo">
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" placeholder="correo@ejemplo.com">
-        <small id="errorCorreo" class="error"></small>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" placeholder="correo@ejemplo.com" autocomplete="email" required aria-describedby="errorCorreo">
+        <small id="errorCorreo" class="error" role="alert"></small>
       </div>
 
       <div class="campo">
         <label for="clave">Contraseña</label>
         <div class="fila-clave">
-          <input type="password" id="clave" placeholder="Mínimo 8 caracteres">
-          <button type="button" id="btnMostrar">Mostrar</button>
+          <input type="password" id="clave" placeholder="Mínimo 8 caracteres" autocomplete="current-password" required aria-describedby="errorClave">
+          <button type="button" id="btnMostrar" aria-label="Mostrar u ocultar contraseña">Mostrar</button>
         </div>
-        <small id="errorClave" class="error"></small>
+        <small id="errorClave" class="error" role="alert"></small>
       </div>
 
       <button type="submit" id="btnIngresar">Ingresar</button>
     </form>
 
-    <p id="mensaje" class="mensaje"></p>
+    <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
   </main>
 
   <script src="script.js"></script>
